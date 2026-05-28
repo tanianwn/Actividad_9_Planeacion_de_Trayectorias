@@ -1,4 +1,3 @@
-<img width="801" height="622" alt="image-7934c5c4-b67d-41df-8ead-d41c950f71e7" src="https://github.com/user-attachments/assets/eadc0209-24bb-4ee9-a5a0-964e4ec390d1" />
 # Actividad 9 Planeacion de Trayectorias
 
 En este repositorio se genera la planeación de trayectorias de un robot móvil de accionamiento diferencial para que su recorrido dibuje la imagen de la actividad planteada. Para lograrlo, se extrajeron coordenadas específicas a partir de una imagen de referencia y se implementó un algoritmo de control para que el robot siguiera la ruta con la mayor presicion posible a los rasgos físicos (orejas, contorno del rostro, hocico, etc.).
@@ -36,10 +35,9 @@ Para que la imagen resultara perfecta y no hubiera recortes bruscos en las curva
 
 Al ejecutar la simulación en MATLAB, se obtuvo una representación visual muy fiel a la imagen. A continuación, se presenta la comparación entre la imagen original utilizada para la extracción de los *waypoints* y el resultado final del seguimiento de trayectoria realizado por el robot diferencial:
 
-<div align="center">
-  <img width="801" height="622" alt="Imagen Original del Felino" src="https://github.com/user-attachments/assets/04485c4a-cc1c-46f0-a2c7-1cb15821da79" />
-  <br><br>
-  <img width="1117" height="717" alt="Trayectoria Final en MATLAB" src="https://github.com/user-attachments/assets/e8dc2d79-09d4-4d4f-8239-6394e0631f18" />
-</div>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/04485c4a-cc1c-46f0-a2c7-1cb15821da79" width="48%" alt="Imagen Original del Felino" />
+  <img src="https://github.com/user-attachments/assets/e8dc2d79-09d4-4d4f-8239-6394e0631f18" width="48%" alt="Trayectoria Final en MATLAB" />
+</p>
 
 Como se observa en la comparativa, la estrategia de control implementada fue un éxito. El algoritmo *Pure Pursuit* logró replicar la silueta orgánica del felino, manteniendo la suavidad en las curvas complejas (como los contornos del rostro y las orejas) y evitando movimientos en "zig-zag" que habría generado un control de posición estándar. La densidad de puntos y el ajuste del *Lookahead* evitaron cortes abruptos, logrando un dibujo continuo y anatómicamente correcto.
