@@ -1,4 +1,4 @@
-# Actividad_9_Planeacion_de_Trayectorias
+# Actividad 9 Planeacion de Trayectorias
 
 En este repositorio se genera la planeación de trayectorias de un robot móvil de accionamiento diferencial para que su recorrido dibuje la imagen de la actividad planteada. Para lograrlo, se extrajeron coordenadas específicas a partir de una imagen de referencia y se implementó un algoritmo de control para que el robot siguiera la ruta con la mayor presicion posible a los rasgos físicos (orejas, contorno del rostro, hocico, etc.).
 
