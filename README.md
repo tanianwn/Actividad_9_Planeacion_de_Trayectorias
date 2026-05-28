@@ -29,3 +29,17 @@ Para que la imagen resultara perfecta y no hubiera recortes bruscos en las curva
 * **`sampleTime = 0.1` s:** Un tiempo de muestreo lo suficientemente pequeño para que el control discreto reaccione rápido a los cambios de dirección continuos.
 
 ---
+
+
+## 6. Resultados y Comparación
+
+Al ejecutar la simulación en MATLAB, se obtuvo una representación visual muy fiel a los rasgos físicos del felino. A continuación, se presenta la comparación entre la imagen original utilizada para la extracción de los *waypoints* y el resultado final del seguimiento de trayectoria realizado por el robot diferencial:
+
+<div align="center">
+  <img src="ruta/original.jpg" width="45%" alt="https://github.com/user-attachments/assets/1ef96323-1369-41ca-991c-cabc4dafef24">
+  &nbsp; &nbsp; &nbsp;
+  <img src="ruta/simulacion.jpg" width="45%" alt="https://github.com/user-attachments/assets/13467fc1-62f4-4cb1-8f1d-56adf6eefed2"/>
+">
+</div>
+
+**Análisis visual:** Como se observa en la comparativa, la estrategia de control implementada fue un éxito. El algoritmo *Pure Pursuit* logró replicar la silueta orgánica del felino, manteniendo la suavidad en las curvas complejas (como los contornos del rostro y las orejas) y evitando los clásicos movimientos en "zig-zag" que habría generado un control de posición estándar. La densidad de puntos y el ajuste del *Lookahead* evitaron cortes abruptos, logrando un dibujo continuo y anatómicamente correcto.
