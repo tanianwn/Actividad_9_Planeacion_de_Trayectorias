@@ -4,7 +4,7 @@ En este repositorio se genera la planeación de trayectorias de un robot móvil 
 
 ---
 
-## 2. Obtención de Puntos (Waypoints)
+## 1. Obtención de Puntos (Waypoints)
 Para garantizar que la trayectoria capturara a la perfección la forma del rostro del felino, se desarrolló un script personalizado en MATLAB, esto debido a que GEOGEBRA tenía complicaciones para marcar todos los puntos de la imegen y extraerlos. 
 
 * **Mapeo en vivo:** El script permite cargar la imagen original y dar clics manuales sobre los bordes y detalles de la imagen.
@@ -13,13 +13,13 @@ Para garantizar que la trayectoria capturara a la perfección la forma del rostr
 
 ---
 
-## 3. Comparación y Justificación de la Estrategia de Control
+## 2. Comparación y Justificación de la Estrategia de Control
 
 Para este reto se evaluaron dos aproximaciones de control cinemático, donde al final se decidió utilizar **Pure Pursuit** sobre el **Control de Posición Punto a Punto** . Se descartó el Control de Posición debido a que obliga al robot a detenerse y girar en cada coordenada, lo que genera movimientos robóticos o bruscos y aumenta drásticamente el tiempo de simulación por las paradas constantes. En su lugar, se seleccionó el algoritmo Pure Pursuit como la técnica más eficiente esto ya que al hacer los ejercicio previos denotó una mejora en el seguimineto de trayectorias, esto hace que el robot persiga un punto virtual a cierta distancia (Lookahead), donde se logra un movimiento continuo con una velocidad lineal optimizada. Esto permite trazar curvas suaves y simples, un comportamiento ideal y estrictamente necesario para dibujar formas naturales o complicadas. 
 
 ---
 
-## 4. Ajuste de Parámetros Cinemáticos
+## 3. Ajuste de Parámetros Cinemáticos
 
 Para que la imagen resultara perfecta y no hubiera recortes bruscos en las curvas de las orejas o la mandíbula, se sintonizaron los parámetros utilizando valores de la actividad anterior en el controlador `controllerPurePursuit`:
 
@@ -31,7 +31,7 @@ Para que la imagen resultara perfecta y no hubiera recortes bruscos en las curva
 ---
 
 
-## 6. Resultados y Comparación
+## 4. Resultados y Comparación
 
 Al ejecutar la simulación en MATLAB, se obtuvo una representación visual muy fiel a la imagen. A continuación, se presenta la comparación entre la imagen original utilizada para la extracción de los *waypoints* y el resultado final del seguimiento de trayectoria realizado por el robot diferencial:
 
